@@ -49,7 +49,7 @@ src/
 
 1. Clone o repositório:
     
-git clone https://github.com/seuusuario/agregador-investimentos-backend.git
+git clone https://github.com/seuusuario/agregador-investimentos.git
 
 2. Configure seu banco MySQL com as credenciais no application.properties
 
