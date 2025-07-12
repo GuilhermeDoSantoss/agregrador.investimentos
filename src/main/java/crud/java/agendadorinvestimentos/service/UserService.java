@@ -1,6 +1,7 @@
 package crud.java.agendadorinvestimentos.service;
 
 import crud.java.agendadorinvestimentos.controller.CreateUserDTO;
+import crud.java.agendadorinvestimentos.controller.UpdateUserDTO;
 import crud.java.agendadorinvestimentos.entity.User;
 import crud.java.agendadorinvestimentos.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,27 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public void updateUserById(String userId, UpdateUserDTO updateUserDTO){
+
+        var id = UUID.fromString(userId);
+
+        var userExiste = userRepository.findById(id);
+
+        if (userExiste.isPresent()){
+            var user = userExiste.get();
+
+            if (updateUserDTO.username() != null){
+                user.setUsername(updateUserDTO.username());
+            }
+
+            if (updateUserDTO.password() != null){
+                user.setPassword(updateUserDTO.password());
+            }
+
+            userRepository.save(user);
+        }
+    }
+
     public void deleteById(String userId){
         var id = UUID.fromString(userId);
 
@@ -52,8 +74,6 @@ public class UserService {
 
         if (userExiste){
             userRepository.deleteById(id);
-        } else {
-
         }
     }
 }
