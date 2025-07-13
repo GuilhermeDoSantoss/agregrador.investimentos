@@ -1,33 +1,46 @@
 # 📊 Agregador de Investimentos
 
-Este projeto é uma API RESTful desenvolvida com Java 21, Spring Boot e MySQL. O objetivo é criar o backend de um **Agregador de Investimentos**, com funcionalidades completas de CRUD, testes unitários e relacionamento entre entidades.
+Bem-vindo ao projeto **Agregador de Investimentos**!
 
-## 🚀 Tecnologias Utilizadas
+Este projeto foi desenvolvido com foco em boas práticas de backend, arquitetura em camadas, testes unitários e consumo de APIs externas com Java 21 e Spring Boot.
+
+## 🛠️ Tecnologias Utilizadas
 
 - Java 21
 - Spring Boot
 - Spring Data JPA (Hibernate)
 - MySQL
+- OpenFeign
 - JUnit 5
 - Mockito
 
-## 🧠 Conceitos Aplicados
+## 📌 O que foi implementado
 
-- Injeção de Dependência e Inversão de Controle (IoC)
-- Arquitetura com camadas: `Controller`, `Service`, `Repository`
-- ORM com Hibernate para mapeamento objeto-relacional
-- Testes unitários com JUnit 5 e Mockito
-- Boas práticas em testes: uso de `ArgumentCaptor`, `verify`, `doReturn`, `doNothing`, `doThrow`
+### ✅ API REST CRUD
+- Estrutura baseada em Controller, Service e Repository.
+- Operações de criar, consultar, atualizar e deletar usuários.
+- Annotations principais do Spring Boot.
+- Injeção de dependência e inversão de controle com `@Autowired`, `@Service`, `@Repository`, `@RestController`, etc.
 
-## 🔧 Funcionalidades
-
-- ✅ Criar, atualizar, consultar e deletar usuários
-- ✅ Testes unitários com cobertura e qualidade
-- ✅ Relacionamentos entre entidades:
+### ✅ ORM com Hibernate
+- Mapeamento automático das classes Java para o banco de dados MySQL usando JPA.
+- Criação de entidades com relacionamentos:
   - `@OneToOne`
   - `@OneToMany`
   - `@ManyToMany`
-- ✅ APIs com suporte a relacionamentos de banco de dados
+
+### ✅ Testes Unitários com JUnit5 e Mockito
+- Testes robustos para a camada de serviço.
+- Boas práticas aplicadas: isolamento de dependências, cobertura lógica e comportamento.
+- Técnicas utilizadas:
+  - `@Mock`, `@InjectMocks`
+  - `verify`, `doReturn`, `doThrow`, `doNothing`
+  - `ArgumentCaptor`
+
+### ✅ Consumo de API Externa (Bolsa de Valores)
+- Integração com APIs de preços de ações usando OpenFeign.
+- Obtenção de credenciais e autenticação.
+- Requisições HTTP GET com headers e parâmetros dinâmicos.
 
 ## 🗃️ Estrutura do Projeto
 
