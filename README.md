@@ -44,18 +44,19 @@ Este projeto foi desenvolvido com foco em boas práticas de backend, arquitetura
 
 ## 🗃️ Estrutura do Projeto
 
-src/
+📁 src
 
-├── controller
+┣ 📂 controller
 
-├── service
+┣ 📂 service
 
-├── repository
+┣ 📂 repository
 
-├── entity
+┣ 📂 entity
 
-└── dto
+┣ 📂 dto
 
+┗ 📂 tests
 
 ## ✅ Como executar
 
@@ -67,9 +68,14 @@ src/
 
 *Configure seu banco MySQL com as credenciais no application.properties*
 
-**2. Rode a aplicação:**
+**2. Rode a aplicação:** 
 
 ./mvnw spring-boot:run
+
+
+**3. Rode a aplicação com:**
+
+SpringBootApplication.
 
 ## 🧪 Rodando os Testes
 
