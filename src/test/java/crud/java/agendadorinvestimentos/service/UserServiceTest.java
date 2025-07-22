@@ -1,7 +1,7 @@
 package crud.java.agendadorinvestimentos.service;
 
-import crud.java.agendadorinvestimentos.controller.CreateUserDTO;
-import crud.java.agendadorinvestimentos.controller.UpdateUserDTO;
+import crud.java.agendadorinvestimentos.controller.dto.CreateUserDTO;
+import crud.java.agendadorinvestimentos.controller.dto.UpdateUserDTO;
 import crud.java.agendadorinvestimentos.entity.User;
 import crud.java.agendadorinvestimentos.repository.UserRepository;
 import org.junit.jupiter.api.DisplayName;
